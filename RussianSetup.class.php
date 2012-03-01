@@ -1,10 +1,10 @@
 <?php
 /*
 Plugin Name: TheCartPress Russian Setup
-Plugin URI: http://extend.thecartpress.com
+Plugin URI: http://extend.thecartpress.com/ecommerce-plugins/russian-ecommerce-setup/
 Description: TheCartPress Russian Setup
 Version: 1.0.0
-Author: TheCartPress team and Vladimir Vasilenko (http://vasilenkovv.moikrug.ru)
+Author: TheCartPress team and Vladimir Vasilenko
 Author URI: http://thecartpress.com
 License: GPL
 Parent: thecartpress

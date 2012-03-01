@@ -14,6 +14,8 @@ Also, it adds Russian regions
 
 TheCartPress is the Professional WordPress eCommerce Plugin. Use it as shopping cart, catalog or framework.
 
+Thanks for translations and local settings to [Vladimir Vasilenko](http://vasilenkovv.moikrug.ru)
+
 * [TheCartPress Extend](http://extend.thecartpress.com): plugins, themes and custom development
 * [TheCartPress Demo](http://demo.thecartpress.com)
 * [TheCartPress Community/Support](http://community.thecartpress.com/activity/)
