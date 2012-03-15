@@ -3,13 +3,13 @@ Contributors: thecartpress and Vladimir Vasilenko
 Tags: Russian, ecommerce, e-commerce, shopping cart, cart, store, shop, shopping, ecomerce, products, TheCartPress, CartPress
 Requires at least: 3.1
 Tested up to: 3.3
-Stable Tag: 1.0.0
+Stable Tag: 1.0.1
 
 Russian setup for TheCartPress, eCommerce Shopping Cart
 
 == Description ==
 
-Russian setup for TheCartPress adds the Russian language files and a button to configurate the stores with Russian currency, etc.
+Russian setup for TheCartPress adds the Russian language files and a button to configure the stores with Russian currency, etc.
 Also, it adds Russian regions
 
 TheCartPress is the Professional WordPress eCommerce Plugin. Use it as shopping cart, catalog or framework.
@@ -49,5 +49,8 @@ This plugin is released under a GPL license.
 
 
 == Changelog ==
-= 1.0 =
+= 1.0.1 =
+Adds the Russian country names
+
+= 1.0.0 =
 First public version.
