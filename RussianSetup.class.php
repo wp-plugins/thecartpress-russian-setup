@@ -3,7 +3,7 @@
 Plugin Name: TheCartPress Russian Setup
 Plugin URI: http://extend.thecartpress.com/ecommerce-plugins/russian-ecommerce-setup/
 Description: TheCartPress Russian Setup
-Version: 1.0.1
+Version: 1.2.4
 Author: TheCartPress team and Vladimir Vasilenko
 Author URI: http://thecartpress.com
 License: GPL
@@ -31,6 +31,20 @@ define( 'TCP_RUSSIAN_FOLDER', dirname( __FILE__ ) . '/languages/' );
 
 class TCPRussianSetup {
 
+	function __construct() {
+		if ( is_admin() ) {
+			add_action( 'admin_menu', array( &$this, 'admin_menu' ), 99 );
+			//add_filter( 'mu_dropdown_languages', array( &$this, 'mu_dropdown_languages' ) , 10, 3 );
+		}
+		add_filter( 'locale', array( &$this, 'locale' ) );
+		add_filter( 'load_textdomain_mofile', array( $this, 'load_textdomain_mofile' ), 10, 2 );
+		add_action( 'tcp_states_loading', array( $this, 'tcp_states_loading' ) );
+	}
+
+	function locale( $locale ) {
+		return 'ru_RU';
+	}
+
 	function admin_menu() {
 		global $thecartpress;
 		if ( $thecartpress ) {
@@ -41,9 +55,10 @@ class TCPRussianSetup {
 
 	function load_textdomain_mofile( $moFile, $domain ) {
 		if ( 'tcp' == substr( $domain, 0, 3 ) ) {
-			$wplang = get_option( 'WPLANG', WPLANG );
+			$wplang = get_option( 'WPLANG', get_locale() );
+			if ( strlen( $wplang ) == 0 ) $wplang = get_locale();
 			$is_russian = 'ru_' == substr( $wplang, 0, 3 );
-			if ( function_exists( 'tcp_get_current_language_iso' ) ) $is_russian = 'ru' == tcp_get_current_language_iso();
+			if ( !$is_russian && function_exists( 'tcp_get_current_language_iso' ) ) $is_russian = 'ru' == tcp_get_current_language_iso();
 			if ( $is_russian ) {
 				$new_mofile = TCP_RUSSIAN_FOLDER . $domain . '-' . $wplang . '.mo';
 				if ( is_readable( $new_mofile ) ) return $new_mofile;
@@ -138,11 +153,6 @@ class TCPRussianSetup {
 //'RU-YEV' : '',
 'RU-ZAB' : 'Забайкальский край',
 } <?php
-	}
-	function __construct() {
-		if ( is_admin() ) add_action( 'admin_menu', array( $this, 'admin_menu' ), 99 );
-		add_filter( 'load_textdomain_mofile', array( $this, 'load_textdomain_mofile' ), 10, 2 );
-		add_action( 'tcp_states_loading', array( $this, 'tcp_states_loading' ) );
 	}
 }
 
