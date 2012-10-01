@@ -1,9 +1,10 @@
 === Russian eCommerce for TheCartPress ===
 Contributors: thecartpress and Vladimir Vasilenko
+Donate link: http://thecartpress.com/collaborate-to-grow-and-support-thecartpress/
 Tags: Russian, ecommerce, e-commerce, shopping cart, cart, store, shop, shopping, ecomerce, products, TheCartPress, CartPress
 Requires at least: 3.1
-Tested up to: 3.3
-Stable Tag: 1.0.1
+Tested up to: 3.4.1
+Stable Tag: 1.2.4
 
 Russian setup for TheCartPress, eCommerce Shopping Cart
 
@@ -49,6 +50,12 @@ This plugin is released under a GPL license.
 
 
 == Changelog ==
+= 1.2.4 =
+Supports TheCartPress 1.2.4
+
+= 1.2 =
+Supports TheCartPress 1.2
+
 = 1.0.1 =
 Adds the Russian country names
 
