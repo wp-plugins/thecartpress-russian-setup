@@ -1,0 +1,61 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: robokassa\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-10-01 10:47+0100\n"
+"PO-Revision-Date: 2012-10-01 10:47+0100\n"
+"Last-Translator: sensei <sensei@thecartpress.com>\n"
+"Language-Team: \n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ../../thecartpress-robokassa/\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: Robokassa.class.php:63
+msgid "Login"
+msgstr "Логин"
+
+#: Robokassa.class.php:69
+msgid "Password"
+msgstr "Пароль"
+
+#: Robokassa.class.php:75
+msgid "Webmoney"
+msgstr "WebMoney"
+
+#: Robokassa.class.php:81
+msgid "Testing mode"
+msgstr "Тестирование"
+
+#: Robokassa.class.php:87
+msgid "URLs to enter in the admin site"
+msgstr "URLы для входа в Панель администратора сайта"
+
+#: Robokassa.class.php:91
+msgid "Result URL"
+msgstr ""
+
+#: Robokassa.class.php:97
+msgid "Success URL"
+msgstr ""
+
+#: Robokassa.class.php:103
+msgid "Fail URL"
+msgstr ""
+
+#: Robokassa.class.php:110
+msgid "Robokassa Console"
+msgstr "Консоль Робокассы"
+
+#: Robokassa.class.php:183
+msgid "<strong>TCPRobokassa for TheCartPress</strong> requires TheCartPress plugin activated."
+msgstr "<strong>TCPRobokassa для TheCartPress</strong> обязателен активированный плагин TheCartPress"
+
+#: Robokassa.class.php:189
+msgid "<strong>TCPRobokassa for TheCartPress</strong> requires TheCartPress plugin"
+msgstr "<strong>TCPRobokassa для TheCartPress</strong> обязателен TheCartPress плагин"
+
