@@ -308,8 +308,13 @@ update_option( 'tcp_settings', $settings );
 global $thecartpress;
 if ( $thecartpress ) $thecartpress->load_settings();
 endif; ?>
+<style>
+div#icon-tcp-ru {
+	background: url('<?php echo plugins_url( '../images/ru_32.png', __FILE__ ); ?>') no-repeat center;
+}
+</style>
 <div class="wrap">
-	<h2>Настройки для России</h2>
+	<?php screen_icon( 'tcp-ru' ); ?><h2>Настройки для России</h2>
 	<ul class="subsubsub"></ul>
 	<div class="clear"></div>
 	<p>Данный раздел представляет возможность настройки TheCartPress для использования в Российской Федерации.</p>
@@ -323,7 +328,7 @@ endif; ?>
 		<li><label><input type="checkbox" name="tcp_country_base" checked="true"/> Расположение магазина: RU. Текущее расположение - <?php global $thecartpress; if ( $thecartpress ) echo $thecartpress->settings['country']; ?></li>
 		<li><label><input type="checkbox" name="tcp_default_tax_country" checked="true"/> Расчёт налогов: RU. Текущий расчйт наогов - <?php echo tcp_get_default_tax_country(); ?></li>
 		<?php global $wpdb;
-		$row = $wpdb->query( $wpdb->prepare( 'SHOW COLUMNS FROM ' . $wpdb->prefix . 'tcp_countries WHERE Field LIKE (\'ru\')' ) );
+		$row = $wpdb->query( 'SHOW COLUMNS FROM ' . $wpdb->prefix . 'tcp_countries WHERE Field LIKE (\'ru\')' );
 		if ( ! $row ) : ?>
 		<li><label><input type="checkbox" name="tcp_add_country_names" checked="true"/> Добавить названия стран</li>
 		<?php endif; ?>

@@ -3,8 +3,8 @@ Contributors: thecartpress and Vladimir Vasilenko
 Donate link: http://thecartpress.com/collaborate-to-grow-and-support-thecartpress/
 Tags: Russian, ecommerce, e-commerce, shopping cart, cart, store, shop, shopping, ecomerce, products, TheCartPress, CartPress
 Requires at least: 3.1
-Tested up to: 3.4.2
-Stable Tag: 1.2.5
+Tested up to: 3.5.2
+Stable Tag: 1.3
 
 Russian setup for TheCartPress, eCommerce Shopping Cart
 
@@ -47,19 +47,23 @@ Up to WodPress 3.1
 This plugin is released under a GPL license.
 
 == Screenshots ==
+1. Russian setup for ecommerce
 
 == Changelog ==
+= 1.3 =
+* Removed language support
+
 = 1.2.5 =
-Supports TheCartPress 1.2.5
+* Supports TheCartPress 1.2.5
 
 = 1.2.4 =
-Supports TheCartPress 1.2.4
+* Supports TheCartPress 1.2.4
 
 = 1.2 =
-Supports TheCartPress 1.2
+* Supports TheCartPress 1.2
 
 = 1.0.1 =
-Adds the Russian country names
+* Adds the Russian country names
 
 = 1.0.0 =
-First public version.
+* First public version.

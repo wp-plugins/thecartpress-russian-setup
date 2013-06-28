@@ -3,7 +3,7 @@
 Plugin Name: TheCartPress Russian Setup
 Plugin URI: http://extend.thecartpress.com/ecommerce-plugins/russian-ecommerce-setup/
 Description: TheCartPress Russian Setup
-Version: 1.2.5
+Version: 1.3
 Author: TheCartPress team and Vladimir Vasilenko
 Author URI: http://thecartpress.com
 License: GPL
@@ -27,25 +27,25 @@ Parent: thecartpress
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-define( 'TCP_RUSSIAN_FOLDER', dirname( __FILE__ ) . '/languages/' );
+//define( 'TCP_RUSSIAN_FOLDER', dirname( __FILE__ ) . '/languages/' );
 
 class TCPRussianSetup {
 
-	function __construct() {
+	static function initPlugin() {
 		if ( is_admin() ) {
-			add_action( 'admin_menu', array( &$this, 'admin_menu' ), 99 );
+			add_action( 'admin_menu', array( __CLASS__, 'admin_menu' ), 99 );
 			//add_filter( 'mu_dropdown_languages', array( &$this, 'mu_dropdown_languages' ) , 10, 3 );
 		}
-		add_filter( 'locale', array( &$this, 'locale' ) );
-		add_filter( 'load_textdomain_mofile', array( $this, 'load_textdomain_mofile' ), 10, 2 );
-		add_action( 'tcp_states_loading', array( $this, 'tcp_states_loading' ) );
+		//add_filter( 'locale', array( &$this, 'locale' ) );
+		//add_filter( 'load_textdomain_mofile', array( $this, 'load_textdomain_mofile' ), 10, 2 );
+		add_action( 'tcp_states_loading', array( __CLASS__, 'tcp_states_loading' ) );
 	}
 
-	function locale( $locale ) {
+	/*function locale( $locale ) {
 		return 'ru_RU';
-	}
+	}*/
 
-	function admin_menu() {
+	static function admin_menu() {
 		global $thecartpress;
 		if ( $thecartpress ) {
 			$base = $thecartpress->get_base_tools();
@@ -53,7 +53,7 @@ class TCPRussianSetup {
 		}
 	}
 
-	function load_textdomain_mofile( $moFile, $domain ) {
+	/*function load_textdomain_mofile( $moFile, $domain ) {
 		if ( 'tcp' == substr( $domain, 0, 3 ) ) {
 			$wplang = get_option( 'WPLANG', get_locale() );
 			if ( strlen( $wplang ) == 0 ) $wplang = get_locale();
@@ -65,9 +65,9 @@ class TCPRussianSetup {
 			}
 		}
 		return $moFile;
-	}
+	}*/
 
-	function tcp_states_loading() { ?>
+	static function tcp_states_loading() { ?>
 , 'RU' : {
 'RU-AD' : 'Адыгея республика / Adygea republic',
 'RU-AL' : 'Алтай республика / Altai republic',
@@ -156,5 +156,5 @@ class TCPRussianSetup {
 	}
 }
 
-new TCPRussianSetup();
+TCPRussianSetup::initPlugin();
 ?>
